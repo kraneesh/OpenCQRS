@@ -7,3 +7,7 @@ It includes only interfaces and utilities to handle commands and queries with no
 ## NuGet package
 
 [![Nuget Package](https://img.shields.io/badge/nuget-1.0.0-blue.svg)](https://www.nuget.org/packages/OpenCqrs)
+
+## Documentation
+
+[https://lucabriguglia.github.io/OpenCQRS/](https://lucabriguglia.github.io/OpenCQRS/)

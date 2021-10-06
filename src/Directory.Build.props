@@ -1,0 +1,20 @@
+<Project>
+	<Import Project="..\Directory.Build.props" Condition="Exists('..\Directory.Build.props')" />
+
+  <PropertyGroup Label="NugetSettings">
+    <Version>1.0.0-Beta</Version>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild Condition="$(Configuration) == 'Release'">true</GeneratePackageOnBuild>
+    <PackageTags>OpenCQRS, .net, mediator, cqrs, clean design, clean code, commands, queries, events</PackageTags>
+    <PackageLicense>Apache-2.0</PackageLicense>
+    <SourcesPackage>true</SourcesPackage> <!-- This should be removed in a future release of the sources lib -->
+  </PropertyGroup>
+
+  <PropertyGroup Label="ReleaseSettings" Condition="$(Configuration) == 'Release'">
+    <OutputPath>..\..\..\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+  
+</Project>

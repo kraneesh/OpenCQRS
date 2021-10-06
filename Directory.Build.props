@@ -1,0 +1,13 @@
+<Project>
+	<Import Project="..\Directory.Build.props" Condition="Exists('..\Directory.Build.props')" />
+
+  <PropertyGroup Label="ProjectSettings">
+    <Authors>Luca Briguglia</Authors>
+    <Copyright>Copyright Luca Briguglia</Copyright>
+    <Product>OpenCQRS</Product>
+    <PackageProjectUrl>https://github.com/lucabriguglia/OpenCQRS</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/lucabriguglia/OpenCQRS</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

@@ -2,7 +2,7 @@
 	<Import Project="..\Directory.Build.props" Condition="Exists('..\Directory.Build.props')" />
 
   <PropertyGroup Label="NugetSettings">
-    <Version>1.0.0-Beta</Version>
+    <Version>1.0.1-Beta</Version>
     <IsPackable>true</IsPackable>
     <GeneratePackageOnBuild Condition="$(Configuration) == 'Release'">true</GeneratePackageOnBuild>
     <PackageTags>OpenCQRS, .net, mediator, cqrs, clean design, clean code, commands, queries, events</PackageTags>

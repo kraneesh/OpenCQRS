@@ -34,7 +34,7 @@ public class GetSomethingQueryHandler : IQueryHandler<GetSomething, Something>
 }
 ```
 
-And finally, get the result using the query sender using the ISender interface:
+And finally, get the result using the the ISender interface:
 
 ```C#
 var query = new GetSomething { Id = 123 };

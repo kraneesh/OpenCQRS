@@ -27,7 +27,7 @@ public class DoSomethingHandler : ICommandHandler<DoSomething>
 }
 ```
 
-And finally, send the command using the command sender (inject ISender interface):
+And finally, send the command using the ISender interface:
 
 ```C#
 var command = new DoSomething();

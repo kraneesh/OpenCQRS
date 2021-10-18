@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace OpenCqrs
 {
-    public interface IDispather
+    public interface IDispatcher
     {
         Task Send<TCommand>(TCommand command) where TCommand : ICommand;
         Task<TResult> Get<TResult>(IQuery<TResult> query);

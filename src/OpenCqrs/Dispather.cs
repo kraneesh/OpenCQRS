@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace OpenCqrs
 {
-    public class Dispather : IDispather
+    public class Dispatcher : IDispatcher
     {
         private readonly ICommandSender _commandSender;
         private readonly IQueryProcessor _queryProcessor;
         private readonly IEventPublisher _eventPublisher;
 
-        public Dispather(ICommandSender commandSender, IQueryProcessor queryProcessor, IEventPublisher eventPublisher)
+        public Dispatcher(ICommandSender commandSender, IQueryProcessor queryProcessor, IEventPublisher eventPublisher)
         {
             _commandSender = commandSender;
             _queryProcessor = queryProcessor;

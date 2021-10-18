@@ -21,7 +21,7 @@ namespace OpenCqrs.Tests
 
             var eventPublisher = new Mock<IEventPublisher>();
 
-            var sut = new Dispather(commandSender.Object, queryProcessor.Object, eventPublisher.Object);
+            var sut = new Dispatcher(commandSender.Object, queryProcessor.Object, eventPublisher.Object);
 
             await sut.Send(command);
 
@@ -41,7 +41,7 @@ namespace OpenCqrs.Tests
 
             var eventPublisher = new Mock<IEventPublisher>();
 
-            var sut = new Dispather(commandSender.Object, queryProcessor.Object, eventPublisher.Object);
+            var sut = new Dispatcher(commandSender.Object, queryProcessor.Object, eventPublisher.Object);
 
             var actual = await sut.Get(query);
 
@@ -61,7 +61,7 @@ namespace OpenCqrs.Tests
             var eventPublisher = new Mock<IEventPublisher>();
             eventPublisher.Setup(x => x.Publish(@event)).Returns(Task.CompletedTask);
 
-            var sut = new Dispather(commandSender.Object, queryProcessor.Object, eventPublisher.Object);
+            var sut = new Dispatcher(commandSender.Object, queryProcessor.Object, eventPublisher.Object);
 
             await sut.Publish(@event);
 

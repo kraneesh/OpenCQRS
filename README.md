@@ -1,6 +1,6 @@
 # OpenCQRS (Beta)
 
-OpenCQRS is a super light version of [Kledex](https://github.com/lucabriguglia/Kledex).
+OpenCQRS is a lightweight version of [Kledex](https://github.com/lucabriguglia/Kledex).
 
 It includes only interfaces and utilities to handle commands and queries with no features for DDD or Event Sourcing.
 

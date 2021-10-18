@@ -34,11 +34,11 @@ public class GetSomethingQueryHandler : IQueryHandler<GetSomething, Something>
 }
 ```
 
-And finally, get the result using the query sender:
+And finally, get the result using the the ISender interface:
 
 ```C#
 var query = new GetSomething { Id = 123 };
-var something = await _querySender.GetResultAsync(query);
+var something = await _sender.GetResultAsync(query);
 ```
 
 ### Other Pages

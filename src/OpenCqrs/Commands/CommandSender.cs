@@ -1,14 +1,14 @@
-﻿using System;
+﻿using OpenCqrs.Services;
+using System;
 using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace OpenCqrs.Commands
 {
     public class CommandSender : ICommandSender
     {
-        private readonly IServiceProvider _serviceProvider;
+        private readonly IServiceProviderWrapper _serviceProvider;
 
-        public CommandSender(IServiceProvider serviceProvider)
+        public CommandSender(IServiceProviderWrapper serviceProvider)
         {
             _serviceProvider = serviceProvider;
         }

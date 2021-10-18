@@ -1,21 +1,22 @@
-﻿using System;
+﻿using OpenCqrs.Services;
+using System;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
 namespace OpenCqrs.Queries
 {
-    public class QuerySender : IQuerySender
+    public class QueryProcessor : IQueryProcessor
     {
-        private readonly IServiceProvider _serviceProvider;
+        private readonly IServiceProviderWrapper _serviceProvider;
 
         private static readonly ConcurrentDictionary<Type, object> _queryHandlerWrappers = new();
 
-        public QuerySender(IServiceProvider serviceProvider)
+        public QueryProcessor(IServiceProviderWrapper serviceProvider)
         {
             _serviceProvider = serviceProvider;
         }
 
-        public async Task<TResult> Send<TResult>(IQuery<TResult> query)
+        public async Task<TResult> Process<TResult>(IQuery<TResult> query)
         {
             if (query == null)
             {

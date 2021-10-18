@@ -1,11 +1,12 @@
-﻿using System;
+﻿using OpenCqrs.Services;
+using System;
 using System.Threading.Tasks;
 
 namespace OpenCqrs.Queries
 {
     internal class QueryHandlerWrapper<TQuery, TResult> : QueryHandlerWrapperBase<TResult> where TQuery : IQuery<TResult>
     {
-        public override Task<TResult> Handle(IQuery<TResult> query, IServiceProvider serviceProvider)
+        public override Task<TResult> Handle(IQuery<TResult> query, IServiceProviderWrapper serviceProvider)
         {
             var handler = GetHandler<IQueryHandler<TQuery, TResult>>(serviceProvider);
 
